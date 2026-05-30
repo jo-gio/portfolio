@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, Box } from '@mui/material';
 import ReactGA from 'react-ga';
-
 import theme from './theme';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
@@ -16,12 +15,9 @@ import Home from './pages/Home/Home';
 import Projects from './pages/Projects';
 import Blogs from './pages/Blogs';
 import Skills from './pages/Skills/Skills';
-
-
 if (process.env.REACT_APP_TRACKING_ID) {
   ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
 }
-
 function AnalyticsTracker() {
   const location = useLocation();
   useEffect(() => {
@@ -32,13 +28,12 @@ function AnalyticsTracker() {
   }, [location]);
   return null;
 }
-
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <Router>
+        <Router basename="/portfolio">
           <AnalyticsTracker />
           <NavBar />
           <Box component="main" sx={{ flex: 1 }}>
@@ -56,7 +51,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-
-
-
-
