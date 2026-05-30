@@ -8,34 +8,34 @@ import { withUtm } from '../utils/withUtm';
 
 const UI = {
   en: {
-    h1_a: 'Ship ',
-    h1_b: 'Production ML ',
-    h1_c: 'Faster',
-    sub: 'I design and deploy ML that moves KPIs: LLM assistants, RAG search, AutoML pipelines, and analytics on Azure — from prototype to production.',
+    h1_a: 'Health Data Science ',
+    h1_b: 'for ',
+    h1_c: 'Public Health Impact',
+    sub: 'Epidemiologist and Health Data Scientist — I turn health data into decisions: epidemiological surveillance, ETL/ELT pipelines, statistical analysis and visualization on Azure.',
     bullets: [
-      { icon: <RocketLaunchIcon />, label: 'Weeks, not quarters' },
-      { icon: <AutoAwesomeIcon />, label: 'LLMs, RAG, AutoML' },
-      { icon: <SecurityIcon />, label: 'Battle‑tested in production' },
+      { icon: <RocketLaunchIcon />, label: 'Epidemiology & Surveillance' },
+      { icon: <AutoAwesomeIcon />, label: 'ETL/ELT, Python, R & SQL' },
+      { icon: <SecurityIcon />, label: 'Azure, Databricks & Power BI' },
     ],
-    ctaPrimary: 'Book a Free Intro Call',
+    ctaPrimary: 'Contact me',
     ctaSecondary: 'See Projects',
-    subject: 'Consulting Inquiry',
+    subject: 'Contact — Portfolio',
     seenIn: 'Experience at',
   },
   es: {
-    h1_a: 'Lleva ',
-    h1_b: 'ML a producción ',
-    h1_c: 'más rápido',
-    sub: 'Diseño e implemento ML que mueve KPIs: asistentes con LLMs, búsqueda RAG, pipelines de AutoML y analítica en Azure — del prototipo a producción.',
+    h1_a: 'Data Science en santé ',
+    h1_b: 'au service de la ',
+    h1_c: 'santé publique',
+    sub: 'Épidémiologiste et Health Data Scientist — je transforme les données de santé en décisions : surveillance épidémiologique, pipelines ETL/ELT, analyse statistique et visualisation sur Azure.',
     bullets: [
-      { icon: <RocketLaunchIcon />, label: 'Semanas, no trimestres' },
-      { icon: <AutoAwesomeIcon />, label: 'LLMs, RAG, AutoML' },
-      { icon: <SecurityIcon />, label: 'Probado en producción' },
+      { icon: <RocketLaunchIcon />, label: 'Épidémiologie & Surveillance' },
+      { icon: <AutoAwesomeIcon />, label: 'ETL/ELT, Python, R & SQL' },
+      { icon: <SecurityIcon />, label: 'Azure, Databricks & Power BI' },
     ],
-    ctaPrimary: 'Agendar llamada',
-    ctaSecondary: 'Ver proyectos',
-    subject: 'Consulta de consultoría',
-    seenIn: 'Experiencia en',
+    ctaPrimary: 'Me contacter',
+    ctaSecondary: 'Voir les projets',
+    subject: 'Contact — Portfolio',
+    seenIn: 'Expériences',
   },
 };
 
@@ -120,4 +120,3 @@ export default function Hero() {
     </Box>
   );
 }
-
