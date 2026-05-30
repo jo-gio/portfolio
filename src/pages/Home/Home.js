@@ -8,47 +8,39 @@ import Seo from '../../components/Seo';
 import homeConfig from '../../assets/configs/homeConfig';
 import Hero from '../../components/Hero';
 import { useLang } from '../../utils/i18n';
-
 export default function Home() {
   const [lang] = useLang();
   const canonical = typeof window !== 'undefined' ? window.location.href : undefined;
-
   const titles = homeConfig.titles_i18n?.[lang] || homeConfig.titles || ['Data Scientist'];
   const about = homeConfig.about_i18n?.[lang] || homeConfig.about || { start: '', exit: '' };
-
   const timelineItems = (homeConfig.workTimeline || []).map((it) => ({
     ...it,
     title: it.title_i18n?.[lang] || it.title,
     description: it.description_i18n?.[lang] || it.description,
   }));
-
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Rodrigo Arenas',
+    name: 'Joseph Giovanni Agbahoungba',
     url: canonical,
     jobTitle: titles?.[0] || 'Data Scientist',
   };
-
   // greeting may be a JSX node (from config) or a string; handle both
   const greetingNode = homeConfig.greeting_i18n?.[lang] || homeConfig.greeting;
   const ExperienceLabel = lang === 'es' ? 'Experiencia' : 'Experience';
-
   return (
     <section>
       <Seo
-        title={lang === 'es' ? 'Rodrigo Arenas — Científico de Datos & Consultor' : 'Rodrigo Arenas — Data Scientist & Consultant'}
+        title={lang === 'es' ? 'Joseph Giovanni Agbahoungba — Data Scientist en Santé' : 'Joseph Giovanni Agbahoungba — Health Data Scientist'}
         description={
           lang === 'es'
-            ? 'Consultoría en ML y datos: LLMs, RAG, AutoML, analítica en Azure. Proyectos, artículos y experiencia.'
-            : 'ML & data consulting: LLMs, RAG, AutoML, analytics on Azure. Selected projects, writing, and experience.'
+            ? 'Épidémiologiste et data scientist en santé : automatisation de pipelines ETL/ELT, exploitation de données hospitalières, analyse statistique et visualisation (Python, SQL, Azure, Power BI).'
+            : 'Epidemiologist and health data scientist: ETL/ELT pipeline automation, hospital data, statistical analysis and visualization (Python, SQL, Azure, Power BI).'
         }
         canonical={canonical}
         jsonLd={jsonLd}
       />
-
       <Hero />
-
       <Container maxWidth="lg" sx={{ py: 6 }}>
         <Grid2 container spacing={4} alignItems="center">
           <Grid2 xs={12} md={6}>
@@ -68,7 +60,6 @@ export default function Home() {
           </Grid2>
         </Grid2>
       </Container>
-
       <Container maxWidth="lg" sx={{ pb: 8 }}>
         <Typography component="h2" variant="h4" sx={{ fontWeight: 800, mb: 3 }}>
           {ExperienceLabel}
@@ -80,5 +71,3 @@ export default function Home() {
     </section>
   );
 }
-
-
