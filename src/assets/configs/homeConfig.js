@@ -1,124 +1,155 @@
 import React from "react";
 import { BsClipboardData } from "react-icons/bs";
-import { DiCodeigniter } from "react-icons/di";
 import { GiCommercialAirplane } from "react-icons/gi";
-import { FaMobileAlt } from "react-icons/fa";
+import { FaMobileAlt, FaGitAlt } from "react-icons/fa";
 import { BiRocket } from "react-icons/bi";
+import { AiFillGithub } from "react-icons/ai";
 
 const homeConfig = {
   greeting_i18n: {
     en: (
       <h1 className="heading">
-        Hi! I'm <strong className="main-name"> Rodrigo Arenas</strong>
+        Hi! I'm <strong className="main-name"> Joseph Giovanni Agbahoungba</strong>
       </h1>
     ),
     es: (
       <h1 className="heading">
-        ¡Hola! Soy <strong className="main-name"> Rodrigo Arenas</strong>
+        Bonjour ! Je suis <strong className="main-name"> Joseph Giovanni Agbahoungba</strong>
       </h1>
     ),
   },
 
   titles_i18n: {
     en: [
-      "ML engineer",
-      "Open Source Contributor",
-      "Backend Developer",
-      "Data Scientist",
-      "Machine Learning Specialist",
-      "Colombian",
+      "Health Data Scientist",
+      "Epidemiologist",
+      "Public Health Researcher",
+      "Data Engineer",
+      "MPH Graduate",
+      "Beninese in France 🇧🇯🇫🇷",
     ],
     es: [
-      "Científico de Datos",
-      "Especialista en Aprendizaje Automático",
-      "Colaborador de Código Abierto",
-      "Desarrollador Backend",
-      "Ingeniero de ML",
-      "Colombiano",
+      "Data Scientist en Santé",
+      "Épidémiologiste",
+      "Chercheur en Santé Publique",
+      "Data Engineer",
+      "Titulaire d'un Master en Santé Publique",
+      "Béninois en France 🇧🇯🇫🇷",
     ],
   },
 
+  // ── Point 5 : paragraphe recentré sur l'impact, pont IA/data ↔ santé publique ──
   about_i18n: {
     en: {
       start:
-        "I've been working for over nine years on data science projects. I'm excited by learning new things, contributing to the data science community, and spreading the word of data!",
+        "At the crossroads of epidemiology and artificial intelligence, I build data solutions that drive public health decisions — from surveillance pipelines to hospital analytics and LLM-powered health tools.",
       exit:
-        "I'm fluent at Python, SQL databases, BI tools, and more, with a deep interest in machine learning.",
+        "Fluent in Python, R, and Azure Databricks, with a strong focus on maternal and child health, implementation science, and equitable health systems.",
     },
     es: {
       start:
-        "He trabajado por más de nueve años en proyectos de ciencia de datos. Me entusiasma aprender cosas nuevas, contribuir a la comunidad y compartir conocimiento.",
+        "À la croisée de l'épidémiologie et de l'intelligence artificielle, je conçois des solutions data au service de la décision en santé publique — des systèmes de surveillance aux pipelines hospitaliers et aux outils IA en santé.",
       exit:
-        "Domino Python, bases de datos SQL, herramientas de BI y más, con un fuerte interés en el aprendizaje automático.",
+        "Maîtrisant Python, R et Azure Databricks, avec un intérêt marqué pour la santé maternelle et infantile, la recherche interventionnelle et l'équité en santé.",
     },
   },
 
-
   workTimeline: [
     {
-      id: "work-4",
-      title: "Sr ML Engineer",
-      title_i18n: { en: "Sr ML Engineer", es: "Sr ML Engineer" },
-      company: "EPAM",
-      description_i18n: {
-        en: "Working to build scalable ML solutions, LLMs, and RAG architectures.",
-        es: "Construyo soluciones de ML escalables, LLMs y arquitecturas RAG.",
+      id: "work-5",
+      title: "Data Engineer & Data Scientist Intern",
+      title_i18n: {
+        en: "Data Engineer & Data Scientist Intern",
+        es: "Stagiaire Data Engineer & Data Scientist",
       },
-      date: "2023-Present",
+      company: "OpenHealth Company",
+      description_i18n: {
+        en: "Contributing to large-scale health data projects: SYNERG-ID (automated epidemiological surveillance data update in France) and THESORIMED (massive pharmaceutical database).",
+        es: "Contribution à des projets data d'envergure : SYNERG-ID (automatisation de la surveillance épidémiologique en France) et THESORIMED (base pharmaceutique massive).",
+      },
+      date: "2026-Present",
       icon: <BiRocket />,
-      tags: ["ml", "mlops", "python", "azure", "llm", "automl"],
+      tags: ["python", "data engineering", "ETL", "health data", "azure databricks"],
+    },
+    {
+      id: "work-4",
+      title: "Epidemiologist – Data Manager",
+      title_i18n: {
+        en: "Epidemiologist – Data Manager",
+        es: "Épidémiologiste – Gestionnaire des données",
+      },
+      company: "CHU Départemental de l'Ouémé",
+      description_i18n: {
+        en: "Head of Planning, Monitoring & Evaluation division. Managed health data and supervised epidemiological surveillance at the departmental hospital level.",
+        es: "Chef de la division planification et suivi-évaluation. Gestion des données de santé et supervision de la surveillance épidémiologique.",
+      },
+      date: "Fév – Août 2025",
+      icon: <FaMobileAlt />,
+      tags: ["epidemiology", "data management", "health systems", "M&E", "R"],
     },
     {
       id: "work-3",
-      title: "Sr Data Scientist",
-      title_i18n: { en: "Sr Data Scientist", es: "Sr Data Scientist" },
-      company: "Globant",
-      description_i18n: {
-        en: "Built AutoML models and made them available to non-technical users from a graphical interface.",
-        es: "Construí modelos AutoML y los hice accesibles para usuarios no técnicos desde una interfaz gráfica.",
+      title: "Vigie Trauma – Coordination Team",
+      title_i18n: {
+        en: "Vigie Trauma – Coordination Team",
+        es: "Vigie Trauma – Équipe de coordination",
       },
-      date: "2021-2023",
-      icon: <DiCodeigniter />,
-      tags: ["ml", "automl", "python", "docker", "redshift", "superset"],
+      company: "IRSP-CAQ",
+      description_i18n: {
+        en: "Active member of the coordination team for a trauma surveillance program in Benin.",
+        es: "Membre de l'équipe de coordination d'un programme de surveillance des traumatismes au Bénin.",
+      },
+      date: "Sept 2024 – Août 2025",
+      icon: <BsClipboardData />,
+      tags: ["surveillance", "coordination", "epidemiology", "public health"],
     },
     {
       id: "work-2",
-      title: "BI Manager",
-      title_i18n: { en: "BI Manager", es: "BI Manager" },
-      company: "Rappi",
-      description_i18n: {
-        en: "Led a team of analysts and data scientists delivering ETLs, data lakes/warehouses, and ML models.",
-        es: "Lideré un equipo de analistas y científicos de datos para ejecutar proyectos de ETLs, data lakes/warehouses y modelos de ML.",
+      title: "Field Researcher – 2PEP4LEP",
+      title_i18n: {
+        en: "Field Researcher – 2PEP4LEP Project",
+        es: "Enquêteur terrain – Projet 2PEP4LEP",
       },
-      date: "2019-2021",
-      icon: <FaMobileAlt />,
-      tags: ["ml", "airflow", "python", "docker", "snowflake", "postgres", "azure"],
+      company: "CIFRED",
+      description_i18n: {
+        en: "Field investigator on a leprosy research project in Zou, Benin, working alongside former patients and their contacts.",
+        es: "Enquêteur sur un projet de recherche sur la lèpre dans le Zou au Bénin, auprès d'anciens cas et de leurs contacts.",
+      },
+      date: "Oct 2024 – Jan 2025",
+      icon: <GiCommercialAirplane />,
+      tags: ["field research", "leprosy", "neglected tropical diseases", "data collection"],
     },
     {
       id: "work-1",
-      title: "CRM Analytics Coordinator",
-      title_i18n: { en: "CRM Analytics Coordinator", es: "Coordinador de Analítica CRM" },
-      company: "Avianca",
-      description_i18n: {
-        en: "Tech lead for BI, Data Science and DBA team. Built forecasting models, a data warehouse and Power BI dashboards.",
-        es: "Líder técnico de un equipo de BI, Ciencia de Datos y DBAs. Construí modelos de pronóstico, data warehouses y tableros en Power BI.",
+      title: "Research Assistant",
+      title_i18n: {
+        en: "Research Assistant",
+        es: "Assistant de recherche",
       },
-      date: "2018-2019",
-      icon: <GiCommercialAirplane />,
-      tags: ["ml", "mssql", "python", "docker", "pbi", "azure"],
+      company: "COPES-AOC",
+      description_i18n: {
+        en: "Affiliated with the regional EcoHealth Chair. Supported research on ecosystems and public health, surveillance and health system strengthening.",
+        es: "Affilié à la chaire écosanté régionale. Appui à la recherche sur les liens entre écosystèmes et santé publique.",
+      },
+      date: "Août 2022 – Juil 2023",
+      icon: <AiFillGithub />,
+      tags: ["research", "ecohealth", "public health", "west africa"],
     },
     {
       id: "work-0",
-      title: "BI Analyst",
-      title_i18n: { en: "BI Analyst", es: "Analista de BI" },
-      company: "Onelink BPO",
-      description_i18n: {
-        en: "Built interactive dashboards, ETLs and SQL queries to show company KPIs.",
-        es: "Construí tableros interactivos, ETLs y consultas SQL para mostrar los KPIs de la compañía.",
+      title: "Data Management Volunteer",
+      title_i18n: {
+        en: "Data Management Volunteer",
+        es: "Volontaire gestionnaire des données",
       },
-      date: "2016-2018",
-      icon: <BsClipboardData />,
-      tags: ["python", "mssql", "pbi", "excel"],
+      company: "PNLLUB",
+      description_i18n: {
+        en: "Data management volunteer for the National Leprosy and Buruli Ulcer Control Programme, supporting field mission data digitalization.",
+        es: "Bénévole en gestion des données pour le PNLLUB, appui à la digitalisation des outils de collecte lors des missions de terrain.",
+      },
+      date: "Août – Sept 2022",
+      icon: <FaGitAlt />,
+      tags: ["data management", "leprosy", "buruli ulcer", "digitalization"],
     },
   ],
 };
