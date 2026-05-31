@@ -20,6 +20,7 @@ import {
   Typography,
 } from '@mui/material';
 import { Search as SearchIcon, OpenInNew as OpenInNewIcon } from '@mui/icons-material';
+import { Link as RouterLink } from 'react-router-dom';
 import blogConfig from '../assets/configs/blogConfig';
 import Seo from '../components/Seo';
 import { withUtm } from '../utils/withUtm';
@@ -161,7 +162,7 @@ export default function Blogs() {
   const t = UI[lang] || UI.en;
 
   const canonical = typeof window !== 'undefined' ? window.location.href : undefined;
-  const EMAIL = process.env.EMAIL || '';
+  const EMAIL = 'gioagbahoungba@gmail.com';
 
   const categories = useMemo(() => {
     const set = new Set(['All']);
@@ -297,10 +298,10 @@ export default function Blogs() {
             {t.stripQ}
           </Typography>
           <Stack direction="row" spacing={1}>
-            <Button size="small" variant="contained" color="secondary" href="/projects">
+            <Button size="small" variant="contained" color="secondary" component={RouterLink} to="/projects">
               {t.stripSee}
             </Button>
-            <Button size="small" variant="outlined" href={withUtm(EMAIL ? `mailto:${EMAIL}` : '#', 'blogs_inline_cta')}>
+            <Button size="small" variant="outlined" href={withUtm(`mailto:${EMAIL}`, 'blogs_inline_cta')}>
               {t.stripTalk}
             </Button>
           </Stack>
