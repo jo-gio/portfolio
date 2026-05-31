@@ -3,37 +3,31 @@ import { Container, Box, Typography, Button, Stack } from '@mui/material';
 import FooterItems from './FooterItems';
 import { useLang } from '../../utils/i18n';
 import { withUtm } from '../../utils/withUtm';
-
 const COPY = {
   en: {
-    headline: "Let’s build something that ships",
-    sub: "Strategy, prototypes, and production ML in weeks — not quarters.",
-    cta: "Book a Call",
+    headline: "Let's turn health data into impact",
+    sub: "Epidemiology, data engineering and AI for public health.",
+    cta: "Contact me",
     projects: "View Projects",
-    subject: "Consulting Inquiry",
+    subject: "Contact — Portfolio",
   },
-  es: {
-    headline: "Construyamos algo que salga a producción",
-    sub: "Estrategia, prototipos y ML en producción en semanas — no trimestres.",
-    cta: "Agendar llamada",
-    projects: "Ver proyectos",
-    subject: "Consulta de consultoría",
+  fr: {
+    headline: "Faisons parler les données de santé",
+    sub: "Épidémiologie, ingénierie des données et IA au service de la santé publique.",
+    cta: "Me contacter",
+    projects: "Voir les projets",
+    subject: "Contact — Portfolio",
   },
 };
-
 export default function Footer() {
   const [lang] = useLang();
   const t = COPY[lang] || COPY.en;
-
-
   const EMAIL = process.env.EMAIL || '';
-
   const emailHref = useMemo(() => {
     const subject = encodeURIComponent(t.subject);
     if (!EMAIL) return '#';
     return withUtm(`mailto:${EMAIL}?subject=${subject}`, 'footer_cta');
   }, [EMAIL, t.subject]);
-
   return (
     <Box sx={{ bgcolor: 'primary.main', color: '#fff', mt: 6 }}>
       <Container maxWidth="lg" sx={{ py: 5, textAlign: 'center' }}>
@@ -62,11 +56,9 @@ export default function Footer() {
         </Stack>
         <FooterItems />
         <Typography variant="caption" sx={{ display: 'block', mt: 2, opacity: 0.75 }}>
-          © {new Date().getFullYear()} Rodrigo Arenas
+          © {new Date().getFullYear()} Joseph Giovanni Agbahoungba
         </Typography>
       </Container>
     </Box>
   );
 }
-
-
