@@ -27,37 +27,37 @@ import { useLang } from '../utils/i18n';
 
 const UI = {
   en: {
-    seoTitle: 'Writing & Insights — Rodrigo Arenas',
-    seoDesc: 'Notes, articles, and insights on data science, ML, and entrepreneurship.',
-    overline: 'Blog',
-    title: 'Writing & Insights',
-    desc: 'Deep dives and quick notes on ML, data systems, and building products.',
-    searchPlaceholder: 'Search posts',
+    seoTitle: 'Publications — Joseph Giovanni Agbahoungba',
+    seoDesc: 'Scientific publications in epidemiology and public health: malaria, maternal health, HIV/AIDS.',
+    overline: 'Publications',
+    title: 'Scientific Publications',
+    desc: 'My research work in epidemiology and public health.',
+    searchPlaceholder: 'Search publications',
     sortRecent: 'Most Recent',
     sortAZ: 'Title (A → Z)',
     ctaRead: 'Read',
     featured: 'Featured',
-    stripQ: 'Looking to ship ML to production?',
+    stripQ: 'Want to know more about my work?',
     stripSee: 'See projects',
-    stripTalk: "Let's talk",
+    stripTalk: 'Contact me',
     new: 'New',
     mins: (m) => `${m} min`,
   },
-  es: {
-    seoTitle: 'Escritura & Notas — Rodrigo Arenas',
-    seoDesc: 'Notas, artículos e ideas sobre ciencia de datos, ML y emprendimiento.',
-    overline: 'Blog',
-    title: 'Artículos y notas',
-    desc: 'Análisis profundos y notas rápidas sobre ML, sistemas de datos y creación de productos.',
-    searchPlaceholder: 'Buscar artículos',
-    sortRecent: 'Más recientes',
-    sortAZ: 'Título (A → Z)',
-    ctaRead: 'Leer',
-    featured: 'Destacados',
-    stripQ: '¿Buscas implementar ML en producción?',
-    stripSee: 'Ver proyectos',
-    stripTalk: 'Hablemos',
-    new: 'Nuevo',
+  fr: {
+    seoTitle: 'Publications — Joseph Giovanni Agbahoungba',
+    seoDesc: 'Publications scientifiques en épidémiologie et santé publique : paludisme, santé maternelle, VIH/SIDA.',
+    overline: 'Publications',
+    title: 'Publications scientifiques',
+    desc: 'Mes travaux de recherche en épidémiologie et santé publique.',
+    searchPlaceholder: 'Rechercher une publication',
+    sortRecent: 'Plus récentes',
+    sortAZ: 'Titre (A → Z)',
+    ctaRead: 'Lire',
+    featured: 'À la une',
+    stripQ: 'Envie d\'en savoir plus sur mon travail ?',
+    stripSee: 'Voir les projets',
+    stripTalk: 'Me contacter',
+    new: 'Nouveau',
     mins: (m) => `${m} min`,
   },
 };
@@ -158,7 +158,7 @@ export default function Blogs() {
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState('recent');
   const [lang] = useLang();
-  const t = UI[lang];
+  const t = UI[lang] || UI.en;
 
   const canonical = typeof window !== 'undefined' ? window.location.href : undefined;
   const EMAIL = process.env.EMAIL || '';
@@ -185,7 +185,7 @@ export default function Blogs() {
       ? filtered.filter((it) =>
           (it.title || '').toLowerCase().includes(q) ||
           (it.description_i18n?.en || '').toLowerCase().includes(q) ||
-          (it.description_i18n?.es || '').toLowerCase().includes(q)
+          (it.description_i18n?.fr || '').toLowerCase().includes(q)
         )
       : filtered;
 
@@ -334,5 +334,3 @@ export default function Blogs() {
     </>
   );
 }
-
-
