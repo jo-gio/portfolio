@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Button, Chip, Container, Stack, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import SecurityIcon from '@mui/icons-material/Security';
@@ -42,10 +43,8 @@ const UI = {
 export default function Hero() {
   const [lang] = useLang();
   const t = UI[lang] || UI.en;
-  const EMAIL = process.env.EMAIL || '';
-  const mailHref = EMAIL
-    ? withUtm(`mailto:${EMAIL}?subject=${encodeURIComponent(t.subject)}`, 'hero_cta')
-    : '#';
+  const EMAIL = 'gioagbahoungba@gmail.com';
+  const mailHref = withUtm(`mailto:${EMAIL}?subject=${encodeURIComponent(t.subject)}`, 'hero_cta');
 
   return (
     <Box
@@ -111,7 +110,7 @@ export default function Hero() {
             <Button href={mailHref} variant="contained" color="secondary" size="large" aria-label={t.ctaPrimary}>
               {t.ctaPrimary}
             </Button>
-            <Button component="a" href="/projects" variant="outlined" size="large" sx={{ color: '#fff', borderColor: 'rgba(255,255,255,.5)' }}>
+            <Button component={RouterLink} to="/projects" variant="outlined" size="large" sx={{ color: '#fff', borderColor: 'rgba(255,255,255,.5)' }}>
               {t.ctaSecondary}
             </Button>
           </Stack>
