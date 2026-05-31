@@ -2,6 +2,21 @@ import React from "react";
 import { BsMedium } from "react-icons/bs";
 const blogConfig = [
   {
+    id: "pub-3",
+    title: "Factors Associated with Dropout from Antenatal Care in the Commune of Kpomassè in Benin in 2024: A Descriptive and Analytical Survey",
+    category: { en: "Maternal Health / Antenatal Care", fr: "Santé maternelle / Suivi prénatal" },
+    description_i18n: {
+      en: "Descriptive and analytical survey on the factors associated with dropout from antenatal care in the commune of Kpomassè, Benin, in 2024. Published in the Asian Journal of Research in Nursing and Health.",
+      fr: "Enquête descriptive et analytique sur les facteurs associés à l'abandon du suivi prénatal dans la commune de Kpomassè (Bénin) en 2024. Publiée dans l'Asian Journal of Research in Nursing and Health.",
+    },
+    links: [
+      { name: "article", url: "https://journalajrnh.com/index.php/AJRNH/article/view/365", icon: <BsMedium /> },
+    ],
+    image: "https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=600&auto=format&fit=crop",
+    target: "_blank",
+    date: "2026-05-28",
+  },
+  {
     id: "pub-2",
     title: "Connaissances, attitudes et pratiques des gestantes de Glo-Djigbé sur la prévention du paludisme (2022)",
     category: { en: "Malaria / Maternal Health", fr: "Paludisme / Santé maternelle" },
