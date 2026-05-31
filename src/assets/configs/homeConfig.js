@@ -151,6 +151,57 @@ const homeConfig = {
       tags: ["data management", "leprosy", "buruli ulcer", "digitalization"],
     },
   ],
+
+  educationTimeline: [
+    {
+      id: "edu-2",
+      title: "Master's in Health Engineering — Health Data Science",
+      title_i18n: {
+        en: "Master's in Health Engineering — Health Data Science",
+        fr: "Master en ingénierie de la santé — Data Science pour la Santé",
+      },
+      company: "Université de Lille",
+      description_i18n: {
+        en: "France Excellence Eiffel scholarship holder. Data engineering, machine and deep learning, advanced visualization and large language models (LLM).",
+        fr: "Étudiant France Excellence Eiffel. Data engineering, machine et deep learning, visualisation avancée et grands modèles de langage (LLM).",
+      },
+      date: "2025-Present",
+      icon: <BiRocket />,
+      tags: ["data science", "machine learning", "python", "health data"],
+    },
+    {
+      id: "edu-1",
+      title: "Master's in Public Health — Epidemiology",
+      title_i18n: {
+        en: "Master's in Public Health — Epidemiology",
+        fr: "Master en Santé Publique — Épidémiologie",
+      },
+      company: "IRSP-CAQ, Ouidah (Bénin)",
+      description_i18n: {
+        en: "2nd runner-up of the cohort. Specialization in epidemiology, biostatistics and research methods.",
+        fr: "2ᵉ vice-major de promotion. Spécialisation en épidémiologie, biostatistique et méthodes de recherche.",
+      },
+      date: "2022-2024",
+      icon: <BsClipboardData />,
+      tags: ["epidemiology", "public health", "biostatistics", "research"],
+    },
+    {
+      id: "edu-0",
+      title: "Bachelor's in Public Health",
+      title_i18n: {
+        en: "Bachelor's in Public Health",
+        fr: "Licence en Santé Publique",
+      },
+      company: "IRSP-CAQ, Ouidah (Bénin)",
+      description_i18n: {
+        en: "Top of the cohort (valedictorian). Foundations in public health, epidemiology and health systems.",
+        fr: "Major de promotion. Fondamentaux en santé publique, épidémiologie et systèmes de santé.",
+      },
+      date: "2019-2022",
+      icon: <FaGitAlt />,
+      tags: ["public health", "epidemiology", "health systems"],
+    },
+  ],
 };
 
 export default homeConfig;
