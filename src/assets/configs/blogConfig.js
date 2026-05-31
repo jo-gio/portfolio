@@ -12,7 +12,7 @@ const blogConfig = [
     links: [
       { name: "article", url: "https://journalajrnh.com/index.php/AJRNH/article/view/365", icon: <BsMedium /> },
     ],
-    image: "https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1579559798539-8386fd9bedc2?q=80&w=1200&auto=format&fit=crop",
     target: "_blank",
     date: "2026-05-28",
   },
@@ -27,7 +27,7 @@ const blogConfig = [
     links: [
       { name: "article", url: "https://revues.imist.ma/index.php/RMSP/article/view/42285", icon: <BsMedium /> },
     ],
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1614090170461-b84fc521e336?q=80&w=1200&auto=format&fit=crop",
     target: "_blank",
     date: "2024-06-30",
   },
