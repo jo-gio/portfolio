@@ -27,47 +27,15 @@ export default function Home() {
   };
   // greeting may be a JSX node (from config) or a string; handle both
   const greetingNode = homeConfig.greeting_i18n?.[lang] || homeConfig.greeting;
-  const ExperienceLabel = lang === 'es' ? 'Experiencia' : 'Experience';
+  const ExperienceLabel = lang === 'fr' ? 'Expérience' : 'Experience';
   return (
     <section>
       <Seo
-        title={lang === 'es' ? 'Joseph Giovanni Agbahoungba — Data Scientist en Santé' : 'Joseph Giovanni Agbahoungba — Health Data Scientist'}
+        title={lang === 'fr' ? 'Joseph Giovanni Agbahoungba — Data Scientist en Santé' : 'Joseph Giovanni Agbahoungba — Health Data Scientist'}
         description={
-          lang === 'es'
+          lang === 'fr'
             ? 'Épidémiologiste et data scientist en santé : automatisation de pipelines ETL/ELT, exploitation de données hospitalières, analyse statistique et visualisation (Python, SQL, Azure, Power BI).'
             : 'Epidemiologist and health data scientist: ETL/ELT pipeline automation, hospital data, statistical analysis and visualization (Python, SQL, Azure, Power BI).'
         }
         canonical={canonical}
-        jsonLd={jsonLd}
-      />
-      <Hero />
-      <Container maxWidth="lg" sx={{ py: 6 }}>
-        <Grid2 container spacing={4} alignItems="center">
-          <Grid2 xs={12} md={6}>
-            {React.isValidElement(greetingNode) ? (
-              <Box sx={{ mb: 1 }}>{greetingNode}</Box>
-            ) : (
-              <Typography variant="h3" sx={{ fontWeight: 800, mb: 1 }}>
-                {greetingNode}
-              </Typography>
-            )}
-            <Box sx={{ color: 'text.secondary', fontSize: 18 }}>
-              <DynamicTyping titles={titles} />
-            </Box>
-          </Grid2>
-          <Grid2 xs={12} md={6}>
-            <About about={about} />
-          </Grid2>
-        </Grid2>
-      </Container>
-      <Container maxWidth="lg" sx={{ pb: 8 }}>
-        <Typography component="h2" variant="h4" sx={{ fontWeight: 800, mb: 3 }}>
-          {ExperienceLabel}
-        </Typography>
-        <Box sx={{ width: '100%', maxWidth: '960px' }}>
-          <Timeline items={timelineItems} />
-        </Box>
-      </Container>
-    </section>
-  );
-}
+        j
