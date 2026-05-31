@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { Container, Box, Typography, Button, Stack } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import FooterItems from './FooterItems';
 import { useLang } from '../../utils/i18n';
 import { withUtm } from '../../utils/withUtm';
@@ -22,12 +23,11 @@ const COPY = {
 export default function Footer() {
   const [lang] = useLang();
   const t = COPY[lang] || COPY.en;
-  const EMAIL = process.env.EMAIL || '';
+  const EMAIL = 'gioagbahoungba@gmail.com';
   const emailHref = useMemo(() => {
     const subject = encodeURIComponent(t.subject);
-    if (!EMAIL) return '#';
     return withUtm(`mailto:${EMAIL}?subject=${subject}`, 'footer_cta');
-  }, [EMAIL, t.subject]);
+  }, [t.subject]);
   return (
     <Box sx={{ bgcolor: 'primary.main', color: '#fff', mt: 6 }}>
       <Container maxWidth="lg" sx={{ py: 5, textAlign: 'center' }}>
@@ -47,7 +47,8 @@ export default function Footer() {
             {t.cta}
           </Button>
           <Button
-            href="/projects"
+            component={RouterLink}
+            to="/projects"
             variant="outlined"
             sx={{ color: '#fff', borderColor: 'rgba(255,255,255,.4)' }}
           >
