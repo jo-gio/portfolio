@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 
 const STORAGE_KEY = 'site_lang';
-const DEFAULT_LANG = 'en';
-export const SUPPORTED_LANGS = ['en', 'es'];
+const DEFAULT_LANG = 'fr';
+export const SUPPORTED_LANGS = ['fr', 'en'];
 
 export const getLang = () => {
   try {
     const stored = typeof window !== 'undefined' && localStorage.getItem(STORAGE_KEY);
     if (stored && SUPPORTED_LANGS.includes(stored)) return stored;
     if (typeof navigator !== 'undefined') {
-      const n = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      const n = (navigator.language || 'fr').slice(0, 2).toLowerCase();
       if (SUPPORTED_LANGS.includes(n)) return n;
     }
   } catch {}
@@ -39,7 +39,6 @@ export const onLangChange = (handler) => {
   };
 };
 
-// Simple React hook to bind to global language
 export const useLang = () => {
   const [lang, set] = useState(getLang());
   useEffect(() => onLangChange(set), []);
