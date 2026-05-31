@@ -23,7 +23,7 @@ const Timeline = ({ items = [], position = 'alternate' }) => {
 
   const localizeDate = (d) => {
     if (typeof d !== 'string') return d;
-    return lang === 'es' ? d.replace(/Present/i, 'Actualidad') : d;
+    return lang === 'fr' ? d.replace(/Present/i, 'Actuellement') : d;
   };
 
   return (
