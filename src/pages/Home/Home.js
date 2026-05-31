@@ -18,6 +18,11 @@ export default function Home() {
     title: it.title_i18n?.[lang] || it.title,
     description: it.description_i18n?.[lang] || it.description,
   }));
+  const educationItems = (homeConfig.educationTimeline || []).map((it) => ({
+    ...it,
+    title: it.title_i18n?.[lang] || it.title,
+    description: it.description_i18n?.[lang] || it.description,
+  }));
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -28,6 +33,7 @@ export default function Home() {
   // greeting may be a JSX node (from config) or a string; handle both
   const greetingNode = homeConfig.greeting_i18n?.[lang] || homeConfig.greeting;
   const ExperienceLabel = lang === 'fr' ? 'Expérience' : 'Experience';
+  const EducationLabel = lang === 'fr' ? 'Formation' : 'Education';
   return (
     <section>
       <Seo
@@ -66,6 +72,14 @@ export default function Home() {
         </Typography>
         <Box sx={{ width: '100%', maxWidth: '960px' }}>
           <Timeline items={timelineItems} />
+        </Box>
+      </Container>
+      <Container maxWidth="lg" sx={{ pb: 8 }}>
+        <Typography component="h2" variant="h4" sx={{ fontWeight: 800, mb: 3 }}>
+          {EducationLabel}
+        </Typography>
+        <Box sx={{ width: '100%', maxWidth: '960px' }}>
+          <Timeline items={educationItems} />
         </Box>
       </Container>
     </section>
