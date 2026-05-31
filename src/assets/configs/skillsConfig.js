@@ -1,50 +1,59 @@
-import {
-  SiPython,
-  SiPostgresql,
-  SiDocker,
-  SiPandas,
-  SiScikitlearn,
-  SiNumpy,
-  SiJupyter,
-  SiR,
-} from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { GrMysql } from "react-icons/gr";
-import React from "react";
-import StorageIcon from "@mui/icons-material/Storage";
-import QueryStatsIcon from "@mui/icons-material/QueryStats";
-import TerminalIcon from "@mui/icons-material/Terminal";
-import CloudIcon from "@mui/icons-material/Cloud";
+import React from 'react';
+import CodeIcon from '@mui/icons-material/Code';
+import StorageIcon from '@mui/icons-material/Storage';
+import CloudIcon from '@mui/icons-material/Cloud';
+import InsightsIcon from '@mui/icons-material/Insights';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 
-const ICON_SIZE = 50;
+const ICON_SIZE = 32;
 
 const skillsConfig = {
-  // Compétences principales
-  mainSkills: [
-    { id: "skills-main-python",   className: "skill-icon", icon: <SiPython size={ICON_SIZE} />,                    text: "Python" },
-    { id: "skills-main-r",        className: "skill-icon", icon: <SiR size={ICON_SIZE} />,                         text: "R" },
-    { id: "skills-main-sql",      className: "skill-icon", icon: <StorageIcon sx={{ fontSize: ICON_SIZE }} />,      text: "SQL" },
-    { id: "skills-main-azure",    className: "skill-icon", icon: <CloudIcon sx={{ fontSize: ICON_SIZE }} />,        text: "Azure Databricks" },
-    { id: "skills-main-git",      className: "skill-icon", icon: <FaGitAlt size={ICON_SIZE} />,                     text: "Git" },
-    { id: "skills-main-powerbi",  className: "skill-icon", icon: <QueryStatsIcon sx={{ fontSize: ICON_SIZE }} />,   text: "Power BI" },
-  ],
-
-  // Packages & outils complémentaires
-  complementarySkills: [
-    // Python ecosystem
-    { id: "skills-comp-pandas",     className: "skill-icon", icon: <SiPandas size={ICON_SIZE} />,                  text: "Pandas" },
-    { id: "skills-comp-numpy",      className: "skill-icon", icon: <SiNumpy size={ICON_SIZE} />,                   text: "NumPy" },
-    { id: "skills-comp-sklearn",    className: "skill-icon", icon: <SiScikitlearn size={ICON_SIZE} />,             text: "Scikit-learn" },
-    { id: "skills-comp-jupyter",    className: "skill-icon", icon: <SiJupyter size={ICON_SIZE} />,                 text: "Jupyter" },
-    // R ecosystem
-    { id: "skills-comp-tidyverse",  className: "skill-icon", icon: <TerminalIcon sx={{ fontSize: ICON_SIZE }} />,  text: "Tidyverse / ggplot2" },
-    // Data infra
-    { id: "skills-comp-postgres",   className: "skill-icon", icon: <SiPostgresql size={ICON_SIZE} />,              text: "PostgreSQL" },
-    { id: "skills-comp-mysql",      className: "skill-icon", icon: <GrMysql size={ICON_SIZE} />,                   text: "MySQL" },
-    { id: "skills-comp-docker",     className: "skill-icon", icon: <SiDocker size={ICON_SIZE} />,                  text: "Docker" },
-    // Analyse
-    { id: "skills-comp-bi",         className: "skill-icon", icon: <QueryStatsIcon sx={{ fontSize: ICON_SIZE }} />, text: "Biostatistics" },
-    { id: "skills-comp-pipeline",   className: "skill-icon", icon: <StorageIcon sx={{ fontSize: ICON_SIZE }} />,   text: "ETL / Pipeline" },
+  categories: [
+    {
+      id: 'cat-prog',
+      icon: <CodeIcon sx={{ fontSize: ICON_SIZE }} />,
+      title_i18n: {
+        en: 'Programming (OOP & functional)',
+        fr: 'Programmation orientée objet et linéaire',
+      },
+      items: ['Python', 'R', 'SQL', 'JSON', 'Git', 'GitHub', 'Azure DevOps', 'VS Code'],
+    },
+    {
+      id: 'cat-data',
+      icon: <StorageIcon sx={{ fontSize: ICON_SIZE }} />,
+      title_i18n: {
+        en: 'Data processing & transformation',
+        fr: 'Traitement et transformation des données',
+      },
+      items: ['Pandas', 'NumPy', 'Requests', 'tidyr', 'stringr', 'readr', 'lubridate', 'DB Browser'],
+    },
+    {
+      id: 'cat-eng',
+      icon: <CloudIcon sx={{ fontSize: ICON_SIZE }} />,
+      title_i18n: {
+        en: 'Data Engineering & Cloud',
+        fr: 'Data Engineering & Cloud',
+      },
+      items: ['PySpark', 'Data Factory', 'Databricks', 'SQL Server', 'Blob Storage', 'Azure', 'REDCap'],
+    },
+    {
+      id: 'cat-viz',
+      icon: <InsightsIcon sx={{ fontSize: ICON_SIZE }} />,
+      title_i18n: {
+        en: 'Statistical analysis & visualization',
+        fr: 'Analyse statistique & visualisation',
+      },
+      items: ['Power BI', 'Plotly', 'Dash', 'Seaborn', 'Graphviz', 'RMarkdown', 'RShiny', 'bibliometrix'],
+    },
+    {
+      id: 'cat-ml',
+      icon: <PsychologyIcon sx={{ fontSize: ICON_SIZE }} />,
+      title_i18n: {
+        en: 'Machine Learning',
+        fr: 'Machine Learning',
+      },
+      items: ['PCA', 'MCA', 'Linear / Logistic / Poisson regression', 'Clustering', 'K-means', 'KNN', 'Random Forest'],
+    },
   ],
 };
 
