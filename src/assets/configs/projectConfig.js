@@ -1,15 +1,14 @@
 import { BiGitRepoForked } from "react-icons/bi";
 import { AiFillGithub, AiFillEye } from "react-icons/ai";
 import React from "react";
-
 const projectConfig = [
   {
     id: "project-4",
     title: "Breast Cancer World Dashboard",
-    category: { en: "Data Visualization", es: "Visualisation de données" },
+    category: { en: "Data Visualization", fr: "Visualisation de données" },
     description_i18n: {
       en: "An interactive dashboard exploring breast cancer statistics at a global level, built with Python.",
-      es: "Tableau de bord interactif explorant les statistiques mondiales sur le cancer du sein, développé en Python.",
+      fr: "Tableau de bord interactif explorant les statistiques mondiales sur le cancer du sein, développé en Python.",
     },
     links: [
       { name: "repo", url: "https://github.com/jo-gio/dashboard-breast-cancer-world", icon: <AiFillGithub /> },
@@ -22,10 +21,10 @@ const projectConfig = [
   {
     id: "project-3",
     title: "ICU Mortality Analysis",
-    category: { en: "Health Data Analysis", es: "Analyse de données de santé" },
+    category: { en: "Health Data Analysis", fr: "Analyse de données de santé" },
     description_i18n: {
       en: "Statistical analysis of mortality in intensive care units using R, exploring clinical risk factors.",
-      es: "Analyse statistique de la mortalité en unités de soins intensifs avec R, explorant les facteurs de risque cliniques.",
+      fr: "Analyse statistique de la mortalité en unités de soins intensifs avec R, explorant les facteurs de risque cliniques.",
     },
     links: [
       { name: "repo", url: "https://github.com/jo-gio/icu-mortality-analysis", icon: <AiFillGithub /> },
@@ -38,10 +37,10 @@ const projectConfig = [
   {
     id: "project-2",
     title: "Intima-Media Analysis",
-    category: { en: "Epidemiology / R", es: "Épidémiologie / R" },
+    category: { en: "Epidemiology / R", fr: "Épidémiologie / R" },
     description_i18n: {
       en: "Analysis of intima-media thickness data as a cardiovascular risk marker, conducted in R.",
-      es: "Analyse de l'épaisseur intima-média comme marqueur de risque cardiovasculaire, réalisée en R.",
+      fr: "Analyse de l'épaisseur intima-média comme marqueur de risque cardiovasculaire, réalisée en R.",
     },
     links: [
       { name: "repo", url: "https://github.com/jo-gio/intima-media-analysis", icon: <AiFillGithub /> },
@@ -54,10 +53,10 @@ const projectConfig = [
   {
     id: "project-1",
     title: "Yogurt Consumer Preference Study",
-    category: { en: "Consumer Data Analysis", es: "Analyse de données consommateurs" },
+    category: { en: "Consumer Data Analysis", fr: "Analyse de données consommateurs" },
     description_i18n: {
       en: "Study of customer preferences for several yogurt brands based on sensory and price data, using R.",
-      es: "Étude des préférences des consommateurs pour plusieurs yaourts à partir de données sensorielles et de prix, en R.",
+      fr: "Étude des préférences des consommateurs pour plusieurs yaourts à partir de données sensorielles et de prix, en R.",
     },
     links: [
       { name: "repo", url: "https://github.com/jo-gio/yaourt-data-analysis", icon: <AiFillGithub /> },
@@ -68,5 +67,4 @@ const projectConfig = [
     target: "_blank",
   },
 ];
-
 export default projectConfig;
