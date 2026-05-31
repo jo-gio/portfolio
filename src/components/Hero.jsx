@@ -22,7 +22,7 @@ const UI = {
     subject: 'Contact — Portfolio',
     seenIn: 'Experience at',
   },
-  es: {
+  fr: {
     h1_a: 'Data Science en santé ',
     h1_b: 'au service de la ',
     h1_c: 'santé publique',
