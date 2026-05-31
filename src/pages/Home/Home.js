@@ -38,4 +38,36 @@ export default function Home() {
             : 'Epidemiologist and health data scientist: ETL/ELT pipeline automation, hospital data, statistical analysis and visualization (Python, SQL, Azure, Power BI).'
         }
         canonical={canonical}
-        j
+        jsonLd={jsonLd}
+      />
+      <Hero />
+      <Container maxWidth="lg" sx={{ py: 6 }}>
+        <Grid2 container spacing={4} alignItems="center">
+          <Grid2 xs={12} md={6}>
+            {React.isValidElement(greetingNode) ? (
+              <Box sx={{ mb: 1 }}>{greetingNode}</Box>
+            ) : (
+              <Typography variant="h3" sx={{ fontWeight: 800, mb: 1 }}>
+                {greetingNode}
+              </Typography>
+            )}
+            <Box sx={{ color: 'text.secondary', fontSize: 18 }}>
+              <DynamicTyping titles={titles} />
+            </Box>
+          </Grid2>
+          <Grid2 xs={12} md={6}>
+            <About about={about} />
+          </Grid2>
+        </Grid2>
+      </Container>
+      <Container maxWidth="lg" sx={{ pb: 8 }}>
+        <Typography component="h2" variant="h4" sx={{ fontWeight: 800, mb: 3 }}>
+          {ExperienceLabel}
+        </Typography>
+        <Box sx={{ width: '100%', maxWidth: '960px' }}>
+          <Timeline items={timelineItems} />
+        </Box>
+      </Container>
+    </section>
+  );
+}
