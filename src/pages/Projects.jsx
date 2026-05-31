@@ -27,28 +27,28 @@ import { useLang } from '../utils/i18n';
 
 const UI = {
   en: {
-    seoTitle: 'Projects | Rodrigo Arenas',
-    seoDesc: 'Open-source libraries, systems, and real-world projects by Rodrigo Arenas.',
+    seoTitle: 'Projects | Joseph Giovanni Agbahoungba',
+    seoDesc: 'Data science and health data projects by Joseph Giovanni Agbahoungba: dashboards, statistical analysis, predictive modeling.',
     overline: 'Selected Work',
     title: 'Projects',
     desc:
-      'A curated collection spanning production-grade libraries, data systems, and this website. Filter, search, and explore.',
+      'A selection of my health data science work: interactive dashboards, statistical analyses, and predictive modeling. Filter, search, and explore.',
     searchPlaceholder: 'Search projects',
     sortRecent: 'Recent',
     sortAZ: 'A → Z',
     ctaView: 'View',
   },
-  es: {
-    seoTitle: 'Proyectos | Rodrigo Arenas',
-    seoDesc: 'Librerías open-source, sistemas y proyectos reales de Rodrigo Arenas.',
-    overline: 'Trabajo destacado',
-    title: 'Proyectos',
+  fr: {
+    seoTitle: 'Projets | Joseph Giovanni Agbahoungba',
+    seoDesc: 'Projets data science et données de santé de Joseph Giovanni Agbahoungba : tableaux de bord, analyses statistiques, modélisation prédictive.',
+    overline: 'Travaux sélectionnés',
+    title: 'Projets',
     desc:
-      'Una colección curada que abarca librerías, modelos de ML y este sitio web. Filtra, busca y explora.',
-    searchPlaceholder: 'Buscar proyectos',
-    sortRecent: 'Recientes',
+      'Une sélection de mes travaux en data science appliquée à la santé : tableaux de bord interactifs, analyses statistiques et modélisation prédictive. Filtrez, recherchez et explorez.',
+    searchPlaceholder: 'Rechercher un projet',
+    sortRecent: 'Récents',
     sortAZ: 'A → Z',
-    ctaView: 'Ver',
+    ctaView: 'Voir',
   },
 };
 
@@ -125,7 +125,7 @@ const ProjectCard = ({ project, lang = 'en' }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {UI[lang].ctaView}
+          {(UI[lang] || UI.en).ctaView}
         </Button>
       </CardActions>
     </Card>
@@ -137,7 +137,7 @@ export default function Projects() {
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState('recent');
   const [lang] = useLang();
-  const t = UI[lang];
+  const t = UI[lang] || UI.en;
 
   const projects = useMemo(() => {
     const filtered = projectConfig.filter((p) => {
@@ -153,7 +153,7 @@ export default function Projects() {
           (p) =>
             (p.title || '').toLowerCase().includes(q) ||
             (p.description_i18n?.en || '').toLowerCase().includes(q) ||
-            (p.description_i18n?.es || '').toLowerCase().includes(q)
+            (p.description_i18n?.fr || '').toLowerCase().includes(q)
         )
       : filtered;
 
@@ -261,6 +261,3 @@ export default function Projects() {
     </>
   );
 }
-
-
-
