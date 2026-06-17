@@ -40,7 +40,7 @@ const blogConfig = [
       fr: "Analyse comparative des inégalités de dépistage et de prévention du VIH/SIDA entre le Bénin et les Antilles françaises, sous l'angle de la culture africaine.",
     },
     links: [
-      { name: "article", url: "#", icon: <BsMedium /> },
+      { name: "article", url: "https://doi.org/10.3917/jibes.343.0047", icon: <BsMedium /> },
     ],
     image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&auto=format&fit=crop",
     target: "_blank",
